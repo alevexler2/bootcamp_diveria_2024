@@ -6,8 +6,10 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #272b33;
 }
-/*nav bar*/
-
+/*header - nav bar*/
+header {
+  max-width: 100%;
+}
 .navbar {
   background-color: #f5f5f5;
   display: flex;
@@ -43,11 +45,14 @@ body {
   font-size: 13px;
 }
 /*head*/
+main {
+  width: 100%;
+}
 .head-title {
   background-color: #f5f5f5;
   background-repeat: no-repeat;
   background-position: center;
-  height: 200px;
+  height: auto;
   padding-top: 50px;
 }
 .head-title h1 {
@@ -74,7 +79,7 @@ body {
   display: flex;
   align-items: center;
   background-color: #3c3e44;
-  min-width: 600px;
+  min-width: 300px;
   height: 220px;
   max-height: 250px;
   border-radius: 10px;
@@ -102,9 +107,11 @@ body {
 
 .character-info {
   padding-left: 10px;
-  /* border: 1px solid red; */
   width: 380px;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .character-info span,
@@ -112,13 +119,10 @@ body {
   display: block;
 }
 
-.character-name {
-  margin-top: 15px;
-}
 .character-name-link {
   color: white;
-  font-size: 25px;
-  /* font-size: calc(1em + 0.5vw); */
+  /* font-size: 25px; */
+  font-size: calc(1em + 0.5vw);
   font-weight: bold;
   text-decoration: none;
   padding-bottom: 1px;
@@ -230,4 +234,49 @@ footer {
 .copyright a:hover {
   text-decoration: none;
   color: orange;
+}
+
+/*Para tablets*/
+@media (min-width: 481px) and (max-width: 1024px) {
+  /* body {
+    background-color: tomato;
+  } */
+
+  /*head title*/
+  .head-title {
+    padding-top: 5px;
+    height: 42vh;
+    padding-bottom: 0px;
+  }
+  .head-title h1 {
+    font-size: 60px;
+  }
+  /*cards*/
+  .gallery {
+    padding-top: 40px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .text-gray {
+    font-size: 1em;
+  }
+  .character-card {
+    max-width: auto;
+    height: 200px;
+  }
+
+  .character-info-name-link {
+    font-size: 2em;
+  }
+
+  .character-last-location a,
+  .character-first-seen a {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-color: yellow;
+  }
 }
