@@ -31,8 +31,13 @@ nav {
     left: 2em;
 }
 
-.logo-rickandmorty-nav img:hover {
-    filter: #97ce4c;
+svg {
+    transition: all 0.5s ease;
+}
+
+svg:hover {
+    fill: #97ce4c;
+    transform: scale(1.2);
 }
 
 h1 {
@@ -299,14 +304,38 @@ footer .coded-by a:hover {
     }
 }
 
-/* @media (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1024px) {
 
     header {
         height: 30vh;
     }
     
     h1 {
-        font-size: 8px;
+        font-size: 12vw;
     }
 
-} */
+    .header-background-image img {
+        width: 50%;
+    }
+
+    header nav button {
+        font-size: 2.2vw;
+    }
+
+    .logo-rickandmorty-nav {
+        position: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 1em;        
+    }
+
+    article {
+        width: 60%;
+    }
+
+    article a, span {
+        font-size: 1.1em;
+    }
+
+}
