@@ -1,0 +1,90 @@
+header {
+    background-color: #44281d;
+    height: 40vh;
+}
+
+header nav button {
+    color: #c2a396;
+}
+
+.supportus {
+    border: 2px dotted #c2a396;
+    background-color: transparent;
+    color: #c2a396;
+}
+
+.supportus:hover {
+    border: 2px dotted #44281d;
+    background-color: #c2a396;
+    color:#44281d;
+
+}
+
+h2 {
+    font-size: 6em;
+    font-family: 'Handjet';
+    color: #c2a396;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 40px #97ce4c;
+}
+
+.character {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    background-color: transparent;
+    height: auto;
+    width: 50%;
+    margin: 0 auto;
+    border-bottom: solid 3px #c2a396;
+}
+
+article:hover {
+    box-shadow: none;
+}
+
+.card-info {
+    margin-top: 0em;
+}
+
+.card-info .card-info-definition {
+    color: #c2a396;
+    margin-top: 1em;
+}
+
+.card-info .card-info-definition p {
+    text-align: justify;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 600px) {
+
+    .character {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .card-info {
+        margin-top: 1em;
+    }
+
+}
+
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    .character {
+        width: 80%;
+    }
+
+    .character div, a, span, p {
+        font-size: 1.1em;
+    }
+
+}
