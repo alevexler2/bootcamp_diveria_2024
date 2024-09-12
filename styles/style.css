@@ -32,7 +32,7 @@ nav {
 }
 
 .logo-rickandmorty-nav img:hover {
-    fill: #97ce4c;
+    filter: #97ce4c;
 }
 
 h1 {
@@ -243,3 +243,70 @@ footer .coded-by a {
 footer .coded-by a:hover {
     text-decoration: none;
 }
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 600px) {
+    
+    header {
+        height: 30vh;
+    }
+
+    h1 {
+        font-size: 12vw;
+    }
+
+    .header-background-image img {
+        width: 50%;
+    }
+    
+    article {
+        flex-direction: column;
+        margin: 0 1.5em;
+        height: auto;
+        padding-bottom: 1em;
+    }
+
+    .card-image {
+        flex-direction: column;
+        width: auto;
+        align-items: center;
+    }
+
+    .card-image img {
+        display: flex;
+        width: 100%;
+    }
+
+    .card-info {
+        margin-top: 1em;
+    }
+
+    footer {
+        padding: 3em 0;
+    }
+
+    footer ul {
+        flex-direction: column;
+    }
+
+    footer ul li + li {
+        padding-left: 0;
+    }
+}
+
+/* @media (max-width: 1024px) {
+
+    header {
+        height: 30vh;
+    }
+    
+    h1 {
+        font-size: 8px;
+    }
+
+} */
