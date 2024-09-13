@@ -276,7 +276,75 @@ footer {
 }
 
 @media (max-width: 480px) {
-  body {
-    background-color: yellow;
+  /*TODO: cuanto el width < 350 aprox, el navbar y header dejan de ocupar todo el ancho*/
+  .navbar ul {
+    padding-right: 0px;
+    /* border: 1px solid red; */
+  }
+  .btn-navbar {
+    font-size: 3.5vw;
+  }
+  .btn-support {
+    padding: 5px 10px;
+    font-size: 3.5vw;
+  }
+  /*head title*/
+  .head-title {
+    padding-top: 5px;
+    height: 40vw;
+    padding-bottom: 0px;
+  }
+  .head-title h1 {
+    font-size: 10vw;
+  }
+  /*cards*/
+  .text-gray {
+    font-size: 1em;
+  }
+  .gallery {
+    padding-top: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+
+  .character-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+    height: auto;
+    margin-top: 50px;
+    max-height: none;
+    padding-bottom: 10px;
+  }
+
+  .character-img {
+    width: 100%;
+  }
+  .character-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .character-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 50px;
+  }
+
+  .character-name-link {
+    font-size: 8vw;
+  }
+
+  .character-last-location a,
+  .character-first-seen a {
+    font-size: 1em;
   }
 }
