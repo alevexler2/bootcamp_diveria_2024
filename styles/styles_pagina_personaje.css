@@ -1,0 +1,60 @@
+.img-background{
+    background-image:url(https://es.web.img3.acsta.net/pictures/18/10/31/17/34/2348073.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    height: 100vh;
+}
+.color-background{
+    background-color: rgb(34, 61, 64);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.texto{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card-custom{
+    background-color: rgb(30, 80, 63);
+    border: 1px solid rgb(68, 94, 85);
+}
+.card-header{
+    background-color: red;
+    color: white
+}
+.icono{
+    width: 2vw;
+    height: auto;
+    margin: 10px;
+    margin-left: 30px;
+}
+
+
+
+
+
+
+.scroll-container{
+    height: 100vh;
+}
+ /* Personalización de la barra de desplazamiento en navegadores WebKit (Chrome, Safari) */
+ .scroll-container::-webkit-scrollbar {
+    width: 5px; /* Ancho de la barra de desplazamiento */
+  }
+
+  .scroll-container::-webkit-scrollbar-track {
+    background: rgb(34, 61, 64); /* Color del fondo de la pista */
+  }
+
+  .scroll-container::-webkit-scrollbar-thumb {
+    background: #888; /* Color del pulgar */
+    border-radius: 10px; /* Bordes redondeados del pulgar */
+  }
+
+  .scroll-container::-webkit-scrollbar-thumb:hover {
+    background: 
+    #c2c2c2; /* Color del pulgar al pasar el ratón */
+  }

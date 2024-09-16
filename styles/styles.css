@@ -169,6 +169,7 @@
     margin: 8px;
     margin-bottom: 5px;
     font-size: 1.5rem;
+    text-decoration: none;
     text-rendering: optimizeLegibility;
 }
 .subtitulo-personaje{
@@ -474,6 +475,17 @@ a:hover{
         position: relative;
         z-index: 1;
         margin: 0 auto; /* Centrar la imagen */
+    }
+
+
+    .nombre{
+        text-decoration: none;
+        text-align: right;
+        font-weight: bold;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 1em;
+        color: black;
+        font-size: 18px ;
     }
 }
 
