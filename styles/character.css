@@ -132,6 +132,31 @@ header {
   color: rgb(90, 88, 88);
   font-size: 1.5vw;
 }
+.character-status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.status-icon {
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 10px;
+  width: 10px;
+  background: rgb(85, 204, 68);
+  border-radius: 50%;
+}
+
+.status-icon.active {
+  background: rgb(85, 204, 68);
+}
+
+.status-icon.dead {
+  background: rgb(214, 61, 46);
+}
+
+.status-icon.unknown {
+  background: rgb(158, 158, 158);
+}
 
 /*footer*/
 footer {
@@ -209,4 +234,11 @@ footer {
 .copyright a:hover {
   text-decoration: none;
   color: orange;
+}
+
+/*usnado js*/
+.character-info-list {
+  color: white;
+  font-size: 1.5vw;
+  padding-left: 3vw;
 }

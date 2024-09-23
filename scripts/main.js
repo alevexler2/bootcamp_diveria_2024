@@ -15,10 +15,10 @@ const createCharacterImage = (imageSrc, name) => {
   `;
 };
 
-const createCharacterName = (name) => {
+const createCharacterName = (name, id) => {
   return `
     <div class="character-name">
-      <a class="character-name-link" href="/pages/character.html">${name}</a>
+      <a class="character-name-link" href="/pages/character.html?id=${id}">${name}</a>
     </div>
   `;
 };
@@ -74,7 +74,7 @@ const createCharacterCard = (character, firstSeen) => {
         ${createCharacterImage(character.image, character.name)}
         <div class="col-sm-9 col-md-8">
           <div class="card-body">
-            ${createCharacterName(character.name)}
+            ${createCharacterName(character.name, character.id)}
             ${createCharacterStatus(character.status, character.species)}
             ${createCharacterLocation(character.location.name)}
             ${createCharacterFirstSeen(firstSeen)} 
