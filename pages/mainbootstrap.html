@@ -52,149 +52,12 @@
     </header>
 
     <main class="container">
-      <div class="row">
-        <!-- Card 1 -->
-        <div class="card-container col-sm-12 col-md-12 col-lg-6 mb-3">
-          <div class="card mx-4 mx-sm-1 mx-md-1 mx-lg-1">
-            <div class="row g-0">
-              <div class="col-sm-3 col-md-4">
-                <img
-                  src="https://rickandmortyapi.com/api/character/avatar/129.jpeg"
-                  class="object-fit-cover img-fluid rounded-start h-100"
-                  alt="..."
-                />
-              </div>
-              <div class="col-sm-9 col-md-8">
-                <div class="card-body">
-                  <div class="character-name">
-                    <a class="character-name-link" href="/pages/character.html"
-                      >Fulgora</a
-                    >
-                    <div class="character-status">
-                      <span class="status-icon"></span>
-                      <span class="status-type">Alive - Human</span>
-                    </div>
-                  </div>
-                  <div class="character-last-location">
-                    <span class="row info-title">Last known location:</span>
-                    <a class="row info-link">Interdimensional Cable </a>
-                  </div>
-                  <div class="character-first-seen">
-                    <span class="row info-title">First seen in:</span>
-                    <a class="row info-link">Rixty Minutes</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="row" id="list-cards-container">
+        
         </div>
-
-        <!-- Card 1 -->
-        <div class="card-container col-sm-12 col-md-12 col-lg-6 mb-3">
-          <div class="card mx-4 mx-sm-1 mx-md-1 mx-lg-1">
-            <div class="row g-0">
-              <div class="col-sm-3 col-md-4">
-                <img
-                  src="https://rickandmortyapi.com/api/character/avatar/130.jpeg"
-                  class="object-fit-cover img-fluid rounded-start h-100 w-100"
-                  alt="..."
-                />
-              </div>
-              <div class="col-sm-9 col-md-8">
-                <div class="card-body">
-                  <div class="character-name">
-                    <a class="character-name-link" href="/pages/character.html"
-                      >Fulgora</a
-                    >
-                    <div class="character-status">
-                      <span class="status-icon"></span>
-                      <span class="status-type">Alive - Human</span>
-                    </div>
-                  </div>
-                  <div class="character-last-location">
-                    <span class="row info-title">Last known location:</span>
-                    <a class="row info-link">Interdimensional Cable </a>
-                  </div>
-                  <div class="character-first-seen">
-                    <span class="row info-title">First seen in:</span>
-                    <a class="row info-link">Rixty Minutes</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="card-container col-sm-12 col-md-12 col-lg-6 mb-3">
-          <div class="card mx-4 mx-sm-1 mx-md-1 mx-lg-1">
-            <div class="row g-0">
-              <div class="col-sm-3 col-md-4">
-                <img
-                  src="https://rickandmortyapi.com/api/character/avatar/131.jpeg"
-                  class="object-fit-cover img-fluid rounded-start h-100"
-                  alt="..."
-                />
-              </div>
-              <div class="col-sm-9 col-md-8">
-                <div class="card-body">
-                  <div class="character-name">
-                    <a class="character-name-link" href="/pages/character.html"
-                      >Fulgora</a
-                    >
-                    <div class="character-status">
-                      <span class="status-icon"></span>
-                      <span class="status-type">Alive - Human</span>
-                    </div>
-                  </div>
-                  <div class="character-last-location">
-                    <span class="row info-title">Last known location:</span>
-                    <a class="row info-link">Interdimensional Cable </a>
-                  </div>
-                  <div class="character-first-seen">
-                    <span class="row info-title">First seen in:</span>
-                    <a class="row info-link">Rixty Minutes</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4 -->
-        <div class="card-container col-sm-12 col-md-12 col-lg-6 mb-3">
-          <div class="card mx-4 mx-sm-1 mx-md-1 mx-lg-1">
-            <div class="row g-0">
-              <div class="col-sm-3 col-md-4">
-                <img
-                  src="https://rickandmortyapi.com/api/character/avatar/132.jpeg"
-                  class="object-fit-cover img-fluid rounded-start h-100"
-                  alt="..."
-                />
-              </div>
-              <div class="col-sm-9 col-md-8">
-                <div class="card-body">
-                  <div class="character-name">
-                    <a class="character-name-link" href="/pages/character.html"
-                      >Fulgora</a
-                    >
-                    <div class="character-status">
-                      <span class="status-icon"></span>
-                      <span class="status-type">Alive - Human</span>
-                    </div>
-                  </div>
-                  <div class="character-last-location">
-                    <span class="row info-title">Last known location:</span>
-                    <a class="row info-link">Interdimensional Cable </a>
-                  </div>
-                  <div class="character-first-seen">
-                    <span class="row info-title">First seen in:</span>
-                    <a class="row info-link">Rixty Minutes</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <button class="btn btn-primary" id="btn-show-others">Mostrar otros</button>
       </div>
     </main>
     <footer class="container-fluid">
@@ -239,5 +102,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="../scripts/main.js"></script>
   </body>
 </html>
