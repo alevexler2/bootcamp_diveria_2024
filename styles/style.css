@@ -166,6 +166,10 @@ article:hover {
     background-color: #97ce4c;
 }
 
+.unknown {
+    background-color: rgb(250, 215, 16);;
+}
+
 .card-info .card-info-location {
     color: #c2a396;
     margin-top: 1em;
