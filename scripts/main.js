@@ -90,7 +90,20 @@ const createCharacterCard = (character, firstSeen) => {
   return cardElement;
 };
 
-const loadListCards = async () => {
+const loadListCardsContainer = async (data) => {
+  listCardsContainerElement.innerHTML = "";
+
+  data.forEach(async (item) => {
+    const episodeResponse = await fetch(item.episode[0]);
+    const episodeData = await episodeResponse.json();
+
+    const cardElement = createCharacterCard(item, episodeData.name);
+    listCardsContainerElement.appendChild(cardElement);
+  });
+};
+
+const loadListCardsRandom = async () => {
+  // para la primera cargar y btn carga de 10 personajes aleatorios
   try {
     let idCharacters = [];
     for (let i = 1; i <= 10; i++) {
@@ -101,90 +114,64 @@ const loadListCards = async () => {
     const response = await fetch(strUrl);
     const data = await response.json();
 
-    listCardsContainerElement.innerHTML = "";
-
-    data.forEach(async (item) => {
-      const episodeResponse = await fetch(item.episode[0]);
-      const episodeData = await episodeResponse.json();
-
-      const cardElement = createCharacterCard(item, episodeData.name);
-      listCardsContainerElement.appendChild(cardElement);
-    });
+    loadListCardsContainer(data);
   } catch (error) {
     console.error("Error fetching characters:", error);
   }
 };
 
-const loadAllCharacters = async () => {
+const loadPage = async (url) => {
+  if (!url) return;
   try {
-    let strUrl = "https://rickandmortyapi.com/api/character/";
-    let allCharacters = [];
-    let hasNextPage = true;
+    const response = await fetch(url);
+    const data = await response.json();
 
-    while (hasNextPage) {
-      const response = await fetch(strUrl);
-      const data = await response.json();
-
-      allCharacters = [...allCharacters, ...data.results];
-
-      if (data.info.next) {
-        strUrl = data.info.next;
-      } else {
-        hasNextPage = false;
-      }
-    }
-
-    return allCharacters;
+    loadListCardsContainer(data.results);
   } catch (error) {
     console.error("Error fetching characters:", error);
+  }
+};
+
+const createPagination = (info, strUrlFilter) => {
+  const paginationElement = document.querySelector(".pagination");
+  paginationElement.innerHTML = "";
+
+  for (let i = 1; i <= info.pages; i++) {
+    paginationElement.innerHTML += `
+      <li class="page-item">
+        <a class="page-link" href="#" onclick="loadPage('${strUrlFilter}&page=${i}')">${i}</a>
+      </li>
+    `;
   }
 };
 
 const loadListCardsWithFilter = async (filterStatus, filterName) => {
   try {
-    //let strUrl = "https://rickandmortyapi.com/api/character/";
-    //const response = await fetch(strUrl);
-    //const data = await response.json();
-    const data = await loadAllCharacters();
-    let filteredData = data;
-    if (
-      typeof filterStatus !== "undefined" &&
-      filterStatus !== null &&
-      filterStatus !== "all"
-    ) {
-      filteredData = filteredData.filter(
-        (item) => item.status.toLowerCase() === filterStatus.toLowerCase()
-      );
-    }
+    let strUrlFilter = "https://rickandmortyapi.com/api/character/?";
+    //if (filterName !== "" || filterStatus !== "all") {
+    if (filterName !== "") strUrlFilter += "name=" + filterName.toLowerCase();
+    if (filterStatus.toLowerCase() !== "")
+      if (filterStatus.toLowerCase() !== "all")
+        strUrlFilter += "&status=" + filterStatus.toLowerCase();
+    const response = await fetch(strUrlFilter);
+    const data = await response.json();
 
-    if (
-      typeof filterName !== "undefined" &&
-      filterName !== null &&
-      filterName !== ""
-    ) {
-      filteredData = filteredData.filter((item) =>
-        item.name.toLowerCase().includes(filterName.toLowerCase())
-      );
-    }
+    let filteredData = data.results;
 
     if (filteredData && filteredData.length > 0) {
-      listCardsContainerElement.innerHTML = "";
-      filteredData.forEach(async (item) => {
-        const episodeResponse = await fetch(item.episode[0]);
-        const episodeData = await episodeResponse.json();
-        const cardElement = createCharacterCard(item, episodeData.name);
-        listCardsContainerElement.appendChild(cardElement);
-      });
+      loadListCardsContainer(filteredData);
+      createPagination(data.info, strUrlFilter);
     } else {
       alert("No characters found with the selected filter");
     }
+    // }
   } catch (error) {
     console.error("Error fetching characters:", error);
   }
 };
 
 btnShowOthers.addEventListener("click", (event) => {
-  loadListCards();
+  loadListCardsRandom();
 });
 
 btnSearch.addEventListener("click", (event) => {
@@ -205,4 +192,4 @@ btnSearch.addEventListener("click", (event) => {
   loadListCardsWithFilter(selectedStatus, inputSearch.value);
 });
 
-window.onload = loadListCards;
+window.onload = loadListCardsRandom;
