@@ -1,0 +1,496 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.contenedor-superior{
+    width: 100%;
+    height: 44vh;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+.contenedor-titulo{
+    width: 100%;
+    height: 36vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+.contenedor-top{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+}
+.icono-inicio{
+    width: 50%;
+    height: 6vh;
+    display: flex;
+    align-items: center; 
+}
+.icono{
+    width: 2vw;
+    height: auto;
+    margin: 10px;
+    margin-left: 30px;
+}
+.contenedor-top-derecha{
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+}
+#name-filter{
+    width: 120px;
+}
+.filtros{
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: .75em;
+    color: black;
+    font-size: 15px ;
+}
+.texto{
+    text-align: right;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 1em;
+    color: black;
+    font-size: 18px ;
+}
+.support-us{
+    margin-right: 40px;
+    border: solid 1px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.contenedor-imagen-titulo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+.titulo{
+    text-align: center;
+    font-weight: bold;
+    font-size: 6vw;
+    font-family:'Segoe UI Black', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 1em;
+    align-self: center;
+    position: absolute;
+    z-index: 2;
+
+}
+.fondo-rick-and-morty{
+    width: 260px;
+    height: auto;
+    opacity: 0.4;
+    filter: brightness(.22);
+    position: relative;
+    z-index: 1;
+}
+.contenedor-central {
+    background-color: rgb(37, 39, 46);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    padding: 100px 40px 100px 40px;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+  
+  .display-informacion {
+    width: 590px; 
+    height:220px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+  }
+
+  .contenedor-imagen {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: lightgray; 
+    flex-shrink: 0;
+  }
+  
+  
+  .imagen-informacion {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .contenedor-datos {
+    flex: 1;
+    padding: 10px;
+    background-color: rgb(61, 64, 75);
+    color: white;
+    display: flex;
+    flex-direction: column; 
+    justify-content:center;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+
+.imagen-informacion {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.texto-estado-personaje{
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+    color: white;
+    margin-left: 1px;
+    text-decoration: none;
+    font-size: 16px;
+}
+.estado-personaje{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.texto-personaje{
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+    color: white;
+    margin-left: 8px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.nombre-personaje{
+    text-align: left;
+    font-family: 'Segoe UI Black', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    margin: 8px;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+}
+.subtitulo-personaje{
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: grey;
+    margin-left: 10px;
+    margin-top: 12px;
+}
+h2:hover{
+    color: orange;
+}
+h2{
+    text-decoration: none;
+}
+.texto-personaje:hover{
+    color: orange;
+}
+
+.footer{
+    width: 100%;
+    height: 40vh;
+    bottom: 0;
+    background-color: rgb(32, 35, 41);
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+.footer-information{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.bold:hover{
+    color: orange;
+}
+.bold{
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: grey;
+    padding: 13px;
+}
+.footer-social-media{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor-icono-social-media{
+    margin: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 20px;
+    height: 20px;
+}
+.icono-social-media{
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+}
+.icono-social-media:hover{
+    color: orange;
+}
+.footer-author{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: orange;
+}
+.author-text{
+    color: grey;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13.5px;
+    font-weight: bold;
+}
+.author-name{
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid orange;
+}
+.author-name:hover{
+    color: orange;
+}
+.punto-verde{
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    background: rgb(85, 204, 68);
+}
+.punto-estado-Alive{
+  height: 0.5rem;
+  width: 0.5rem;
+  margin-right: 0.375rem;
+  margin-left: 10px;
+  background: rgb(85, 204, 68);
+  border-radius: 50%;
+}
+.punto-estado-Dead{
+    height: 0.5rem;
+    width: 0.5rem;
+    margin-right: 0.375rem;
+    margin-left: 10px;
+    background: rgb(189, 29, 29);
+    border-radius: 50%;
+}
+  .punto-estado-unknown{
+    height: 0.5rem;
+    width: 0.5rem;
+    margin-right: 0.375rem;
+    margin-left: 10px;
+    background: rgb(121, 104, 104);
+    border-radius: 50%;
+}
+/* Ajustes para tablets */
+@media (max-width: 1024px) {
+
+    /* Ajustar el header */
+    .contenedor-top {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .icono-inicio {
+        justify-content: center;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .contenedor-top-derecha {
+        width: 100%;
+        justify-content: center;
+        margin: 5px 0;
+    }
+
+    /* Ajustar el tamaño del logo */
+    .icono {
+        width: 34px; /* Ajustar a un tamaño más pequeño */
+    }
+    .titulo {
+        font-size: 10vw; /* Se adapta dinámicamente al ancho de la pantalla */
+    }
+
+    .imagen-informacion {
+        height: auto;
+        width: 100%;
+    }
+
+    .contenedor-datos {
+        padding: 15px;
+    }
+
+    /* Ajustar el pie de página */
+    .footer {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: auto;
+    }
+
+    .footer-information ul {
+        margin: 5px 0;
+    }
+
+    .contenedor-icono-social-media {
+        width: 30px;
+        height: 30px;
+    }
+    /* Ajustar el tamaño del título */
+    .titulo {
+        font-size: 6vw; /* Disminuir el tamaño del título en pantallas pequeñas */
+        margin: 0.5em 0; /* Reducir el margen superior e inferior */
+        position: absolute; /* Evitar superposición con otros contenedores */
+        z-index: 2;
+    }
+    /* Ajustar la imagen de fondo */
+    .fondo-rick-and-morty {
+        width: 26%; /* Ajustar el tamaño de la imagen para que sea más pequeña en móviles */
+        height: auto;
+        max-width: 300px; /* Limitar el tamaño máximo de la imagen */
+    }
+}
+/* Ajustes para celulares) */
+@media (max-width: 600px) {
+
+    /* Ajustar el header */
+    .contenedor-top {
+        flex-direction: row;
+        align-items: center;
+        margin-top: 10px;
+
+    }
+
+    .icono-inicio {
+        justify-content: center;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .contenedor-top-derecha {
+        width: 100%;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    /* Ajustar el tamaño del logo */
+    .icono {
+        width: 34px; /* Ajustar a un tamaño más pequeño */
+    }
+
+    /* Ajustar el contenedor del título */
+    .contenedor-titulo {
+        width: 100%;
+        height: 100%;
+    }
+    .contenedor-imagen-titulo{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .titulo {
+        font-size: 10vw; /* Se adapta dinámicamente al ancho de la pantalla */
+
+    }
+
+    /* Contenedor central en una columna */
+    .contenedor-central {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    /* Hacer que cada tarjeta ocupe el ancho completo del móvil */
+    .display-informacion {
+        width: 78%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    /* Ajustar las imágenes de la información */
+    .contenedor-imagen {
+        width: 100%;
+        height: auto;
+    }
+
+    .imagen-informacion {
+        height: auto;
+        width: 100%;
+    }
+
+    .contenedor-datos {
+        padding: 15px;
+    }
+
+    /* Ajustar el pie de página */
+    .footer {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: auto;
+    }
+
+    .footer-information ul {
+        margin: 5px 0;
+    }
+
+    .contenedor-icono-social-media {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Ajustar el tamaño del título */
+    .titulo {
+        font-size: 6vw; /* Disminuir el tamaño del título en pantallas pequeñas */
+        margin: 0.5em 0; /* Reducir el margen superior e inferior */
+        position:absolute; /* Evitar superposición con otros contenedores */
+        z-index: 2;
+    }
+
+    /* Ajustar la imagen de fondo */
+    .fondo-rick-and-morty {
+        width: 35%; /* Ajustar el tamaño de la imagen para que sea más pequeña en móviles */
+        height: auto;
+        max-width: 300px; /* Limitar el tamaño máximo de la imagen */
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+        margin: 0 auto; /* Centrar la imagen */
+    }
+    .nombre{
+        text-decoration: none;
+        text-align: right;
+        font-weight: bold;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 1em;
+        color: black;
+        font-size: 18px ;
+    }
+}
+
+
+
+
+
+
+
