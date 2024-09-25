@@ -23,6 +23,7 @@ header {
 nav {    
     display: flex;
     justify-content: end;
+    align-items: center;
     margin: 1em;
 }
 
@@ -38,6 +39,27 @@ svg {
 svg:hover {
     fill: #97ce4c;
     transform: scale(1.2);
+}
+
+#filterCharacter {
+    margin-right: 1em;
+}
+
+nav input {
+    height: 2em;
+    outline: 0;
+    border-width: 0 0 .1em;
+    border-color: #44281d;
+    color: #44281d;
+    font-family: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+}
+
+nav input:focus {
+    border-color:#97ce4c;
+}
+
+nav input::placeholder {
+    color:#977b6f;
 }
 
 h1 {
@@ -103,7 +125,7 @@ section {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2em;
-    margin: 3em 0 6em;
+    margin: 3em 0 4em;
 }
 
 a {
@@ -178,6 +200,29 @@ article:hover {
 .card-info .card-info-firstseen {
     color: #c2a396;
     margin-top: 1em;
+}
+
+
+/* PAGINATION */
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    margin-bottom: 3em;
+}
+
+#pagination button {
+    border: 1px solid #97ce4c;
+    border-radius: 30%;
+    color: #97ce4c;
+    margin: 0 .2em;
+    transition: all .3s ease;
+
+    &:hover {
+        background-color: #97ce4c;
+        color:#6b402e;
+    }
 }
 
 
