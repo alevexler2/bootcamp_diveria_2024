@@ -1,0 +1,73 @@
+/* STYLE BOOTSTRAP */
+
+.supportus {
+    border-radius: .5em;
+    border: 1px solid #aaa
+}
+
+.supportus:hover {
+    background-color: #aaa;
+}
+
+.container {
+    background-color: #fff;
+    box-shadow: 0 0 1em .1em #444;
+}
+
+h1 {
+    font-size: 5vw;
+}
+
+strong {
+    color:#aaa;
+    letter-spacing: .5em;
+}
+
+.card {
+    border: none;
+}
+
+.footer a {
+    display: block;
+    text-decoration: none;
+    color: #777;
+    margin: 0 .2em;
+}
+
+.footer a:hover {
+    color: #c90;
+    text-decoration: underline;
+}
+
+.footer {
+    font-size: .9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    background-color: #333;
+    color: #777;
+}
+
+ul {
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+p {
+    margin-bottom: 0;
+    padding: .3em 0;
+}
+
+.footer-left-content {
+    padding-left: 15%;
+}
+
+li {
+    padding: .2em 0;
+}
+
+.footer span {
+    color: #c90;
+}
