@@ -3,6 +3,7 @@ const API_URL = 'https://rickandmortyapi.com/api/character';
 const section = document.querySelector('section');
 const reloader = document.querySelector('.logo-rickandmorty-nav');
 const filterInput = document.getElementById('filterCharacter');
+const statusSelect = document.getElementById('statusSelect');
 
 
 async function showCharacters(characters) {
@@ -86,10 +87,13 @@ async function paginationForFilteredCharacters(filteredQuantity, urlWithFilters)
     }
 };
 
-async function getFilteredCharacters(filterSearch) {
+async function getFilteredCharacters(filterSearch, filterStatus) {
     try {
         let urlWithFilters = `${API_URL}/?`;
-        if (filterSearch !== "") urlWithFilters += `name=${filterSearch.toLowerCase()}`;
+        if (filterSearch !== "") 
+            urlWithFilters += `name=${filterSearch.toLowerCase()}`;
+        if (filterStatus !== "" && filterStatus.value !== "default") 
+            urlWithFilters += `&status=${filterStatus}`;
 
         const response = await fetch(urlWithFilters);
         const characters = await response.json();
@@ -110,17 +114,28 @@ async function getFilteredCharacters(filterSearch) {
     }
 };
 
-filterInput.addEventListener("keypress", (evt) => {
-    if (evt.key === "Enter") {
-        evt.preventDefault();
-        getFilteredCharacters(filterInput.value);
-    }
-})
+// Hacer foco en el input para que aparezca el selector de status
+filterInput.addEventListener("focus", (evt) => {
+    evt.preventDefault();
+    statusSelect.classList.remove('hidden');
+});
 
+// Al cambiar el status, se realiza la búsqueda con el nombre filtrado (query)
+statusSelect.addEventListener("change", (evt) => {
+    const status = statusSelect.value;
+    const query = filterInput.value;
+
+    evt.preventDefault();
+
+    getFilteredCharacters(query, status);
+});
+
+// Recarga de personajes random con el logo superior izquierdo
 reloader.addEventListener('click', () => {
     getCharactersRandomly();
-})
+});
 
+// Carga inicial
 getCharactersRandomly();
 
 
