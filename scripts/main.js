@@ -3,7 +3,11 @@ const listCardsContainerElement = document.getElementById(
 );
 const btnShowOthers = document.getElementById("btn-show-others");
 const inputSearch = document.getElementById("input-search");
-const filterChecks = document.getElementsByName("inlineRadioOptions");
+const filterRadioButtonsStatus =
+  document.getElementsByName("inlineRadioOptions");
+const filterRadioButtonsGender = document.getElementsByName(
+  "dropdownRadioGender"
+);
 const btnSearch = document.getElementById("btn-search");
 
 const createCharacterImage = (imageSrc, name) => {
@@ -145,14 +149,20 @@ const createPagination = (info, strUrlFilter) => {
   }
 };
 
-const loadListCardsWithFilter = async (filterStatus, filterName) => {
+const loadListCardsWithFilter = async (
+  filterStatus,
+  filterName,
+  filterGender
+) => {
   try {
     let strUrlFilter = "https://rickandmortyapi.com/api/character/?";
-    //if (filterName !== "" || filterStatus !== "all") {
     if (filterName !== "") strUrlFilter += "name=" + filterName.toLowerCase();
     if (filterStatus.toLowerCase() !== "")
       if (filterStatus.toLowerCase() !== "all")
         strUrlFilter += "&status=" + filterStatus.toLowerCase();
+    if (filterGender.toLowerCase() !== "")
+      if (filterGender.toLowerCase() !== "all")
+        strUrlFilter += "&gender=" + filterGender.toLowerCase();
     const response = await fetch(strUrlFilter);
     const data = await response.json();
 
@@ -164,7 +174,6 @@ const loadListCardsWithFilter = async (filterStatus, filterName) => {
     } else {
       alert("No characters found with the selected filter");
     }
-    // }
   } catch (error) {
     console.error("Error fetching characters:", error);
   }
@@ -175,8 +184,8 @@ btnShowOthers.addEventListener("click", (event) => {
 });
 
 btnSearch.addEventListener("click", (event) => {
-  let selectedStatus = "";
-  filterChecks.forEach((button) => {
+  let selectedStatus = "all";
+  filterRadioButtonsStatus.forEach((button) => {
     if (button.checked) {
       if (button.id === "inlineRadio1") {
         selectedStatus = "Alive";
@@ -184,12 +193,24 @@ btnSearch.addEventListener("click", (event) => {
         selectedStatus = "Dead";
       } else if (button.id === "inlineRadio3") {
         selectedStatus = "Unknown";
-      } else {
-        selectedStatus = "all";
       }
     }
   });
-  loadListCardsWithFilter(selectedStatus, inputSearch.value);
+  selectedGender = "all";
+  filterRadioButtonsGender.forEach((button) => {
+    if (button.checked) {
+      if (button.id === "dropdownRadioFemale") {
+        selectedGender = "female";
+      } else if (button.id === "dropdownRadioMale") {
+        selectedGender = "male";
+      } else if (button.id === "dropdownRadioGenderless") {
+        selectedGender = "genderless";
+      } else if (button.id === "dropdownRadioUnknown") {
+        selectedGender = "unknown";
+      }
+    }
+  });
+  loadListCardsWithFilter(selectedStatus, inputSearch.value, selectedGender);
 });
 
 window.onload = loadListCardsRandom;

@@ -61,15 +61,10 @@
             id="input-search"
           />
         </div>
-        <div class="col-md-6" id="filter-box">
-          <div
-            class="input-group mb-3 d-flex justify-content-between"
-            id="filter-checks"
-          >
-            <label class="input-group-text me-4" for="select-status"
-              >Status</label
-            >
-            <div class="form-check form-check-inline">
+        <div class="col-md-5" id="filter-box">
+          <div class="input-group mb-3 d-flex" id="filter-checks">
+            <label class="input-group-text" for="select-status">Status</label>
+            <div class="form-check form-check-inline ms-1">
               <input
                 class="form-check-input"
                 type="radio"
@@ -112,8 +107,77 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-3">
-          <button class="btn btn-primary m-0" id="btn-search">BUSCAR</button>
+        <div class="dropdown col-md-2 mb-3">
+          <button
+            type="button"
+            class="btn btn-secondary dropdown-toggle w-100"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            data-bs-auto-close="outside"
+          >
+            Género
+          </button>
+          <form class="dropdown-menu p-4 bg-secondary">
+            <div class="form-check mb-1">
+              <input
+                type="radio"
+                name="dropdownRadioGender"
+                class="form-check-input"
+                id="dropdownRadioAll"
+                checked
+              />
+              <label class="form-check-label" for="dropdownRadioAll">
+                All
+              </label>
+            </div>
+            <div class="form-check mb-1">
+              <input
+                type="radio"
+                name="dropdownRadioGender"
+                class="form-check-input"
+                id="dropdownRadioFemale"
+              />
+              <label class="form-check-label" for="dropdownRadioFemale">
+                Female
+              </label>
+            </div>
+            <div class="form-check mb-1">
+              <input
+                type="radio"
+                name="dropdownRadioGender"
+                class="form-check-input"
+                id="dropdownRadioMale"
+              />
+              <label class="form-check-label" for="dropdownRadioMale">
+                Male
+              </label>
+            </div>
+            <div class="form-check mb-1">
+              <input
+                type="radio"
+                name="dropdownRadioGender"
+                class="form-check-input"
+                id="dropdownRadioGenderless"
+              />
+              <label class="form-check-label" for="dropdownRadioGenderless">
+                Genderless
+              </label>
+            </div>
+            <div class="form-check mb-1">
+              <input
+                type="radio"
+                name="dropdownRadioGender"
+                class="form-check-input"
+                id="dropdownRadioUnknown"
+              />
+              <label class="form-check-label" for="dropdownRadioUnknown">
+                Unknown
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-2 mb-3">
+          <button class="btn btn-success m-0" id="btn-search">BUSCAR</button>
         </div>
       </div>
       <div class="row" id="list-cards-container"></div>
