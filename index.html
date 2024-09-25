@@ -11,6 +11,29 @@
         <header class="contenedor-top">
             <div class="icono-inicio">
                 <img src="assets/logo.png" alt="logo-rickandmorty" class="icono">
+                <div class="filtros">
+                    <label for="name-filter">Filtrar nombre:</label>
+                    <input type="text" id="name-filter" placeholder="Nombre personaje...">
+                </div>
+                <div class="filtros">
+                    <label for="status-filter">Estado:</label>
+                    <select id="status-filter">
+                        <option value="">Todos</option>
+                        <option value="alive">Alive</option>
+                        <option value="dead">Dead</option>
+                        <option value="unknown">Unknown</option>
+                    </select>
+                </div>
+                <div class="filtros">
+                    <label for="gender-filter">Genero:</label>
+                    <select id="gender-filter">
+                        <option value="">Todos</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option value="genderless">Genderless</option>
+                        <option value="unknown">Unknown</option>
+                    </select>
+                </div>
             </div>
             <div class="contenedor-top-derecha">
                 <a class="texto support-us" href="">SUPPORT US</a>
@@ -26,138 +49,7 @@
         </div>
     </div>
 
-    <div class="contenedor-central">
-        <div class="display-informacion">
-            <div class="contenedor-imagen">
-                <img src="assets/esqueleto.png" alt="esqueleto" class="imagen-informacion">
-            </div>
-            <div class="contenedor-datos">
-                <a href="pages/pagina_personaje.html">
-                    <h2 class="nombre-personaje">Daaron Jefferson</h2>
-                </a>
-                <div class="estado-personaje">
-                    <span class="punto-estado"></span>
-                    <span class="texto-estado-personaje">Alive - Alien</span>
-                </div>
-                
-                <span class="subtitulo-personaje">Last known location:</span>
-                <span class="texto-personaje">Unity's Planet</span>
-
-                <span class="subtitulo-personaje">First seen in:</span>
-                <span class="texto-personaje">Auto Erotic Assimilation</span>
-
-
-            </div>
-        </div>
-        <div class="display-informacion">
-            <div class="contenedor-imagen">
-                <img src="assets/hombreNegro.jpeg" alt="hombre-negro" class="imagen-informacion">
-            </div>
-            <div class="contenedor-datos">
-                <a href="pages/pagina_personaje.html">
-                    <h2 class="nombre-personaje">Martin Alberto Salas</h2>
-                </a>
-                
-                <div class="estado-personaje">
-                    <span class="punto-estado"></span>
-                    <span class="texto-estado-personaje">Alive - Alien</span>
-                </div>
-                
-                <span class="subtitulo-personaje">Last known location:</span>
-                <span class="texto-personaje">Unity's Planet</span>
-
-                <span class="subtitulo-personaje">First seen in:</span>
-                <span class="texto-personaje">Auto Erotic Assimilation</span>
-
-
-            </div>
-        </div>
-        <div class="display-informacion">
-            <div class="contenedor-imagen">
-                <img src="assets/astronauta.png" alt="astronauta" class="imagen-informacion">
-            </div>
-            <div class="contenedor-datos">
-                <a href="pages/pagina_personaje.html">
-                    <h2 class="nombre-personaje">Juan Pablo Puppo</h2>
-                </a>
-                <div class="estado-personaje">
-                    <span class="punto-estado"></span>
-                    <span class="texto-estado-personaje">Alive - Alien</span>
-                </div>
-                
-                <span class="subtitulo-personaje">Last known location:</span>
-                <span class="texto-personaje">Unity's Planet</span>
-
-                <span class="subtitulo-personaje">First seen in:</span>
-                <span class="texto-personaje">Auto Erotic Assimilation</span>
-
-
-            </div>
-        </div>
-        <div class="display-informacion">
-            <div class="contenedor-imagen">
-                <img src="assets/mujer1.png" alt="mujer" class="imagen-informacion">
-            </div>
-            <div class="contenedor-datos">
-                <a href="pages/pagina_personaje.html">
-                    <h2 class="nombre-personaje">Julia Maria Blast</h2>
-                </a>
-                <div class="estado-personaje">
-                    <span class="punto-estado"></span>
-                    <span class="texto-estado-personaje">Alive - Alien</span>
-                </div>
-                
-                <span class="subtitulo-personaje">Last known location:</span>
-                <span class="texto-personaje">Unity's Planet</span>
-
-                <span class="subtitulo-personaje">First seen in:</span>
-                <span class="texto-personaje">Auto Erotic Assimilation</span>
-
-
-            </div>
-        </div>
-        <div class="display-informacion">
-            <div class="contenedor-imagen">
-                <img src="assets/madeInAbyss.jpeg" alt="rick-abominacion" class="imagen-informacion">
-            </div>
-            <div class="contenedor-datos">
-                <a href="pages/pagina_personaje.html">
-                    <h2 class="nombre-personaje">Cravero Hector</h2>
-                </a>
-                <div class="estado-personaje">
-                    <span class="punto-estado"></span>
-                    <span class="texto-estado-personaje">Alive - Alien</span>
-                </div>
-                
-                <span class="subtitulo-personaje">Last known location:</span>
-                <span class="texto-personaje">Unity's Planet</span>
-
-                <span class="subtitulo-personaje">First seen in:</span>
-                <span class="texto-personaje">Auto Erotic Assimilation</span>
-
-
-            </div>
-        </div>
-        <div class="display-informacion">
-            <div class="contenedor-imagen">
-                <img src="assets/pescado1.jpeg" alt="pescado-armado" class="imagen-informacion">
-            </div>
-            <div class="contenedor-datos">
-                <a href="pages/pagina_personaje.html">
-                    <h2 class="nombre-personaje">El Pescado Lopez</h2>
-                </a>
-                <div class="estado-personaje">
-                    <span class="punto-estado"></span>
-                    <span class="texto-estado-personaje">Alive - Alien</span>
-                </div>
-                
-                <span class="subtitulo-personaje">Last known location:</span>
-                <span class="texto-personaje">Unity's Planet</span>
-
-                <span class="subtitulo-personaje">First seen in:</span>
-                <span class="texto-personaje">Auto Erotic Assimilation</span>
-            </div>
-        </div>
+    <div class="contenedor-central" id="contenedor-personajes">
     </div>
     <divc class="footer">
         <div class="footer-information">
@@ -193,4 +85,5 @@
     </div>
 
 </body>
+<script src="main.js"></script>
 </html>

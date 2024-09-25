@@ -4,18 +4,23 @@
 }
 .contenedor-superior{
     width: 100%;
-    height: 42vh;
+    height: 44vh;
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
 }
+.contenedor-titulo{
+    width: 100%;
+    height: 36vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
 .contenedor-top{
     width: 100%;
-    height: 6vh;
+    height: 8vh;
     display: flex;
     flex-direction: row;
-
-
 }
 .icono-inicio{
     width: 50%;
@@ -36,6 +41,16 @@
     align-items: center;
 
 }
+#name-filter{
+    width: 120px;
+}
+.filtros{
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: .75em;
+    color: black;
+    font-size: 15px ;
+}
 .texto{
     text-align: right;
     font-weight: bold;
@@ -50,14 +65,6 @@
     padding: 5px 10px;
     border-radius: 10px;
 }
-
-.contenedor-titulo{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-}
 .contenedor-imagen-titulo{
     width: 100%;
     height: 100%;
@@ -65,7 +72,6 @@
     flex-direction: row;
     justify-content:center;
 }
-
 .titulo{
     text-align: center;
     font-weight: bold;
@@ -178,9 +184,7 @@
     color: grey;
     margin-left: 10px;
     margin-top: 12px;
-
 }
-
 h2:hover{
     color: orange;
 }
@@ -258,7 +262,6 @@ a:hover{
     font-size: 13.5px;
     font-weight: bold;
 }
-
 .author-name{
     color: white;
     text-decoration: none;
@@ -266,7 +269,6 @@ a:hover{
 }
 .author-name:hover{
     color: orange;
-
 }
 .punto-verde{
     height: 0.5rem;
@@ -274,13 +276,29 @@ a:hover{
     border-radius: 50%;
     background: rgb(85, 204, 68);
 }
-.punto-estado{
+.punto-estado-Alive{
   height: 0.5rem;
   width: 0.5rem;
   margin-right: 0.375rem;
   margin-left: 10px;
   background: rgb(85, 204, 68);
   border-radius: 50%;
+}
+.punto-estado-Dead{
+    height: 0.5rem;
+    width: 0.5rem;
+    margin-right: 0.375rem;
+    margin-left: 10px;
+    background: rgb(189, 29, 29);
+    border-radius: 50%;
+}
+  .punto-estado-unknown{
+    height: 0.5rem;
+    width: 0.5rem;
+    margin-right: 0.375rem;
+    margin-left: 10px;
+    background: rgb(121, 104, 104);
+    border-radius: 50%;
 }
 /* Ajustes para tablets */
 @media (max-width: 1024px) {
@@ -307,21 +325,6 @@ a:hover{
     .icono {
         width: 34px; /* Ajustar a un tamaño más pequeño */
     }
-
-
-    /* Ajustar el contenedor del título */
-    .contenedor-titulo {
-        width: 100%;
-        height: 100%;
-    }
-    .contenedor-imagen-titulo{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-
-    }
-
     .titulo {
         font-size: 10vw; /* Se adapta dinámicamente al ancho de la pantalla */
     }
@@ -350,8 +353,6 @@ a:hover{
         width: 30px;
         height: 30px;
     }
-    
-
     /* Ajustar el tamaño del título */
     .titulo {
         font-size: 6vw; /* Disminuir el tamaño del título en pantallas pequeñas */
@@ -476,8 +477,6 @@ a:hover{
         z-index: 1;
         margin: 0 auto; /* Centrar la imagen */
     }
-
-
     .nombre{
         text-decoration: none;
         text-align: right;
