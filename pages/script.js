@@ -4,10 +4,12 @@ const section = document.querySelector('section');
 const reloader = document.querySelector('.logo-rickandmorty-nav');
 const filterInput = document.getElementById('filterCharacter');
 const statusSelect = document.getElementById('statusSelect');
+const spinner = document.getElementById('spinner-container');
 
 
 async function showCharacters(characters) {
     section.innerHTML = '';
+    let indexId = 0;
     
     characters.forEach(async (character) => {
         const episodeResponse = await fetch(character.episode[0]);
@@ -20,7 +22,7 @@ async function showCharacters(characters) {
                 </div>
                 <div class="card-info">
                     <div class="card-info-name">
-                        <a href="../pages/character/hepatitisa.html">${character.name}</a>
+                        <a href="../pages/character/character.html?id=${indexId++}">${character.name}</a>
                     </div>
                     <div class="card-info-life">
                         <span class="card-info-life-status-icon ${character.status.toLowerCase()}"></span>
@@ -51,7 +53,12 @@ async function getCharactersRandomly() {
         let urlCharacter = `${API_URL}/${arrayRandomIdCharacter.join(",")}`;
         const response = await fetch(urlCharacter);
         const characters = await response.json();
+
         showCharacters(characters);
+        spinner.setAttribute('hidden', '');
+
+        localStorage.setItem('characters', JSON.stringify(characters));
+
     } catch (error) {
         console.log("Couldn't fetch characters.", error.message);
     }

@@ -228,6 +228,29 @@ article:hover {
     margin-top: 1em;
 }
 
+.spinner {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #6b402e;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #97ce4c;
+
+    animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 /* PAGINATION */
 
