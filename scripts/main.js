@@ -9,7 +9,7 @@ const filterRadioButtonsGender = document.getElementsByName(
   "dropdownRadioGender"
 );
 const btnSearch = document.getElementById("btn-search");
-
+const spinnerContainer = document.getElementById("spinner-container");
 const createCharacterImage = (imageSrc, name) => {
   return `
     <div class="col-sm-3 col-md-4">
@@ -104,10 +104,10 @@ const loadListCardsContainer = async (data) => {
     const cardElement = createCharacterCard(item, episodeData.name);
     listCardsContainerElement.appendChild(cardElement);
   });
+  spinnerContainer.setAttribute("hidden", "");
 };
 
 const loadListCardsRandom = async () => {
-  // para la primera cargar y btn carga de 10 personajes aleatorios
   try {
     let idCharacters = [];
     for (let i = 1; i <= 10; i++) {

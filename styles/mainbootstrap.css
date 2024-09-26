@@ -171,7 +171,15 @@ h1 {
   background-color: #272b33;
   color: orange;
 }
-
+/*spinner*/
+#spinner-container {
+  margin-top: 10vh;
+  margin-bottom: 20vh;
+}
+#load-spinner {
+  font-size: 3vh;
+  color: #3c3e44;
+}
 /*footer*/
 footer {
   background-color: #202329;
