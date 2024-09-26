@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RickAndMorty</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>The Rick and Morty API</h1>
+        <div class="header-buttons">
+            <button class="btn btn-outline-light">Docs</button>
+            <button class="btn btn-outline-light">About</button>
+            <button class="btn btn-outline-warning">Support Us</button>
+        </div>
+    </header>
+
+    <main class="container mt-4">
+
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <input type="text" id="character-name" class="form-control" placeholder="Buscar personaje por nombre">
+            </div>
+            <div class="col-md-3">
+                <select id="character-status" class="form-select">
+                    <option value="">Elegir estado</option>
+                    <option value="alive">Alive</option>
+                    <option value="dead">Dead</option>
+                    <option value="unknown">Unknown</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select id="character-gender" class="form-select">
+                    <option value="">Elegir género</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                    <option value="genderless">Genderless</option>
+                    <option value="unknown">Unknown</option>
+                </select>
+            </div>
+            <div class="col-md-2 text-end">
+                <button id="search-btn" class="btn btn-primary">Buscar</button>
+            </div>
+        </div>
+
+        <div id="loading-spinner" class="text-center my-4">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        
+
+        <div class="row" id="card-container">
+
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12 text-end">
+                <button id="next-page-btn" class="btn btn-primary">Siguiente página</button>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="d-flex justify-content-center mb-3">
+                <div class="mx-3">
+                    <a href="#">CHARACTERS: 826</a>
+                </div>
+                <div class="mx-3">
+                    <a href="#">LOCATIONS: 126</a>
+                </div>
+                <div class="mx-3">
+                    <a href="#">EPISODES: 51</a>
+                </div>
+            </div>
+            <div class="row serverstatus">
+                <div class="col-12 text-center"><a href="#">SERVER STATUS</a></div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <img src="../assets/optimus.png" alt="optimus">
+                    <img src="../assets/BMW-Logo-PNG.png" alt="BMW-Logo-PNG">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <small>&copy; <> by<a href="https://www.linkedin.com/in/matias-rescala/" target="_blank">Matias Rescala</a>2024</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script/script.js"></script>
+</body>
+</html>
