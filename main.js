@@ -30,9 +30,11 @@ async function getEpisodeName(episodeUrl) {
 }
 
 nameHTML.addEventListener('keyup', function (event) {
-    const nameToFilter = nameHTML.value.trim();
-    if (nameToFilter) {
-        filterPerNameStatusGender();
+    if(event.key == 'Enter'){
+        const nameToFilter = nameHTML.value.trim();
+        if (nameToFilter) {
+            filterPerNameStatusGender();
+        }
     }
 });
 statusHTML.addEventListener('change', function () {
