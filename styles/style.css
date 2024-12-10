@@ -1,0 +1,439 @@
+html {
+    background-color: #44281d;
+    font-family: /*'Handjet'*/ 'Segoe UI', 'Roboto';
+}
+
+body {
+    margin: 0px;
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 0px;
+    background-color: #FFF;
+    height: 50vh;
+    overflow: hidden;
+}
+
+nav {    
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 1em;
+}
+
+.logo-rickandmorty-nav {
+    position: absolute;
+    left: 2em;
+}
+
+svg {
+    transition: all 0.5s ease;
+}
+
+svg:hover {
+    fill: #97ce4c;
+    transform: scale(1.2);
+}
+
+#filterCharacter {
+    margin-right: 0;
+}
+
+#statusSelect {
+    margin-right: 1em;
+}
+
+.hidden {
+    display: none;
+}
+
+select {
+    width: 5em;
+    height: 2em;
+    border-width: 0 0 .1em;
+    border-color: #44281d;
+    background-color: #977b6f;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0 1em 0 0;
+    margin: 0;
+    
+    &:hover {
+        border: none;
+    }
+}
+
+
+nav input {
+    padding: 0;
+    height: 2em;
+    outline: 0;
+    border-width: 0 0 .1em;
+    border-color: #44281d;
+    color: #44281d;
+    font-family: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+}
+
+nav input:focus {
+    border-color:#97ce4c;
+}
+
+nav input::placeholder {
+    color:#977b6f;
+}
+
+h1 {
+    font-size: 8em;
+    font-family: 'Handjet';
+    color: #44281d;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 40px #97ce4c;
+}
+
+button {
+    color: #44281d;
+    background-color: transparent;
+    border: 0px;
+    font-size: 1em;
+    font-weight: bold;
+    padding: .5em;
+    font-family: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+}
+
+button:hover {
+    cursor: pointer;
+    color: #97ce4c;
+}
+
+.supportus {
+    transition: color .3s ease;
+    border: 2px dotted #44281d;
+    border-radius: 1em;
+    font-weight: normal;
+    margin-left: .5em;
+}
+
+.supportus:hover {
+    color: #fff;
+    background-color: #44281d;
+    border: 2px dotted #fff;
+}
+
+.header-background-image {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.header-background-image img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    z-index: 1;
+    opacity: .2;
+    filter:brightness(.5);
+}
+
+
+/* CARDS */
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin: 3em 0 4em;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #fff; 
+}
+
+article {
+    display: flex;
+    justify-content: start;
+    background-color:#6b402e;
+    width: 32em;
+    height: 14em;
+    border-radius: 1em;
+}
+
+article:hover {
+    box-shadow: 0 0 .7em #c2a396b7;
+}
+
+.card-image {
+    display: flex;
+    margin: 0px;
+}
+
+.card-image img {
+    border-radius: 1em;
+}
+
+.card-info {
+    margin: .6em;
+    margin-left: 1.2em;
+    color: #fff;
+}
+
+.card-info a:hover {
+    color: #97ce4c;
+}
+
+.card-info .card-info-name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.card-info-life-status-icon {
+    display: flex inline;
+    height: .5em;
+    width: .5em;
+    margin-left: .1em;
+    margin-right: .15em;
+    border-radius: 50%;
+}
+
+.dead {
+    background-color: rgb(199, 13, 13);
+}
+
+.alive {
+    background-color: #97ce4c;
+}
+
+.unknown {
+    background-color: rgb(250, 215, 16);;
+}
+
+.card-info .card-info-location {
+    color: #c2a396;
+    margin-top: 1em;
+}
+
+.card-info .card-info-firstseen {
+    color: #c2a396;
+    margin-top: 1em;
+}
+
+.spinner {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #6b402e;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #97ce4c;
+
+    animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* PAGINATION */
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    margin-bottom: 3em;
+}
+
+#pagination button {
+    border: 1px solid #97ce4c;
+    border-radius: 30%;
+    color: #97ce4c;
+    margin: 0 .2em;
+    transition: all .3s ease;
+
+    &:hover {
+        background-color: #97ce4c;
+        color:#6b402e;
+    }
+}
+
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #311c14;
+    padding: 5em 0;
+    font-size: .9em;
+    flex-flow: column;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+footer ul li + li {
+    padding-left: 1.5em;
+}
+
+footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease;
+    color: #977b6f;
+    font-weight: bold;
+
+}
+
+footer a:hover {
+    color: #97ce4c;
+}
+
+footer .footer-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.server-status-icon {
+    display: flex;
+    height: .6em;
+    width: .6em;
+    border-radius: 50%;
+    margin-left: .5em;
+}
+
+footer .coded-by {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #977b6f;
+    margin-top: 4em;
+}
+
+footer .coded-by a {
+    padding: 0 .3em;
+    text-decoration: underline #97ce4c;
+
+}
+
+footer .coded-by a:hover {
+    text-decoration: none;
+}
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 600px) {
+    
+    header {
+        height: 30vh;
+    }
+
+    h1 {
+        font-size: 12vw;
+    }
+
+    .header-background-image img {
+        width: 50%;
+    }
+    
+    article {
+        flex-direction: column;
+        margin: 0 1.5em;
+        height: auto;
+        padding-bottom: 1em;
+    }
+
+    .card-image {
+        flex-direction: column;
+        width: auto;
+        align-items: center;
+    }
+
+    .card-image img {
+        display: flex;
+        width: 100%;
+    }
+
+    .card-info {
+        margin-top: 1em;
+    }
+
+    footer {
+        padding: 3em 0;
+    }
+
+    footer ul {
+        flex-direction: column;
+    }
+
+    footer ul li + li {
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    header {
+        height: 30vh;
+    }
+    
+    h1 {
+        font-size: 12vw;
+    }
+
+    .header-background-image img {
+        width: 50%;
+    }
+
+    header nav button {
+        font-size: 2.2vw;
+    }
+
+    .logo-rickandmorty-nav {
+        position: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 1em;        
+    }
+
+    article {
+        width: 60%;
+    }
+
+    article a, span {
+        font-size: 1.1em;
+    }
+
+}
