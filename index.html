@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./styles/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RickAndMorty</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+    <div class="contenedor-superior">
+        <header class="contenedor-top">
+            <div class="icono-inicio">
+                <img src="assets/logo.png" alt="logo-rickandmorty" class="icono">
+                <div class="filtros">
+                    <label for="name-filter">Filtrar nombre:</label>
+                    <input type="text" id="name-filter" placeholder="Nombre personaje...">
+                </div>
+                <div class="filtros">
+                    <label for="status-filter">Estado:</label>
+                    <select id="status-filter">
+                        <option value="">Todos</option>
+                        <option value="alive">Alive</option>
+                        <option value="dead">Dead</option>
+                        <option value="unknown">Unknown</option>
+                    </select>
+                </div>
+                <div class="filtros">
+                    <label for="gender-filter">Genero:</label>
+                    <select id="gender-filter">
+                        <option value="">Todos</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option value="genderless">Genderless</option>
+                        <option value="unknown">Unknown</option>
+                    </select>
+                </div>
+            </div>
+            <div class="contenedor-top-derecha">
+                <a class="texto support-us" href="">SUPPORT US</a>
+                <a class="texto" href="">About</a>
+                <a class="texto" href="">Docs</a>
+            </div>
+        </header>
+        <div class="contenedor-titulo">
+            <div class="contenedor-imagen-titulo">
+                <img src="assets/rickandmorty.png" alt="RickAndMorty" class="fondo-rick-and-morty">
+            </div>
+            <h1 class="titulo colorcito">The Rick and Morty API</h1>
+        </div>
+    </div>
+
+    <div class="contenedor-central" id="contenedor-personajes">
+    </div>
+    <divc class="footer">
+        <div class="footer-information">
+            <ul class="bold">CHARACTERS: 826</ul>
+            <ul class="bold">ATIONS: 126</ul>
+            <ul class="bold">EPISODES: 51</ul>
+        </div>
+        <div class="footer-information">
+            <ul class="bold">SERVER STATUS</ul>
+            <span class="punto-verde"></span>
+        </div>
+        <div class="footer-sponsors">
+
+        </div>
+        <div class="footer-social-media">
+            <div class="contenedor-icono-social-media">
+                <img src="assets/github.png" alt="icono github" class="icono-social-media">
+            </div>
+            <div class="contenedor-icono-social-media">
+                <img src="assets/twitter.png" alt="icono twitter" class="icono-social-media">
+            </div>
+            <div class="contenedor-icono-social-media">
+                <img src="assets/corazon.png" alt="icono corazon" class="icono-social-media">
+            </div>
+        </div>
+        <div class="footer-author">
+            <span class="author-text">
+                <> by
+                <a href="" class="author-name">Santiago Conelli</a>
+            </span>
+            <span class="author-text"> &nbsp 2024</span>
+        </div>
+    </div>
+
 </body>
+<script src="main.js"></script>
 </html>
